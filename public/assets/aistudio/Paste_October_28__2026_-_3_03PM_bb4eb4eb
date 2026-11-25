@@ -1,0 +1,1219 @@
+[Violation] Added non-passive event listener to a scroll-blocking <some> event. Consider marking event handler as 'passive' to make the page more responsive. See <URL>
+VM804719 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM804730 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM804719 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM804730 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM804725 rc2Contentscript.js:249 Uncaught TypeError: Cannot read properties of null (reading 'scrollHeight')
+    at VM804725 rc2Contentscript.js:249:91
+(anonymous) @ VM804725 rc2Contentscript.js:249
+setInterval
+listenToParent @ VM804725 rc2Contentscript.js:246
+(anonymous) @ VM804725 rc2Contentscript.js:626
+VM804769 base.js:8850 Uncaught Error: Storage: Invalid value was encountered
+    at create (https://www.youtube.com/s/player/dce23b30/player_es6.vflset/en_GB/base.js:8850:64)
+    at playerBootstrap (https://www.youtube.com/watch?v=NWANo9BRz6Y:38:5656)
+    at https://www.youtube.com/watch?v=NWANo9BRz6Y:39:101
+create @ VM804769 base.js:8850
+playerBootstrap @ VM804771 watch:1
+(anonymous) @ VM804771 watch:2
+VM804708:1357  POST https://www.youtube.com/youtubei/v1/log_event?alt=json net::ERR_BLOCKED_BY_CLIENT
+reflect @ VM804708:1357
+(anonymous) @ VM804708:1193
+apply @ VM804708:1392
+qr @ VM804769 base.js:1342
+(anonymous) @ VM804769 base.js:1353
+sr @ VM804769 base.js:1345
+nu @ VM804769 base.js:1606
+l @ VM804769 base.js:1659
+(anonymous) @ VM804769 base.js:1660
+Joa @ VM804769 base.js:1763
+Moa @ VM804769 base.js:1753
+(anonymous) @ VM804769 base.js:1751
+(anonymous) @ VM804769 base.js:918
+yv @ VM804769 base.js:1751
+jpa @ VM804769 base.js:1794
+Lpa @ VM804769 base.js:1836
+Fpa @ VM804769 base.js:1832
+(anonymous) @ VM804769 base.js:1826
+create @ VM804769 base.js:8850
+playerBootstrap @ VM804771 watch:1
+(anonymous) @ VM804771 watch:2
+VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:10125 LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.
+VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3192 [Violation] 'requestAnimationFrame' handler took 88ms
+[Violation] 'requestAnimationFrame' handler took 115ms
+VM804708:1357  GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT
+reflect @ VM804708:1357
+(anonymous) @ VM804708:1193
+apply @ VM804708:1392
+N9N @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1484
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1498
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20788
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5763
+mX9 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20785
+PND @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20799
+QfQ @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21788
+OaL @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21215
+created @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:29390
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1896
+created @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2044
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3425
+_initializeProperties @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7260
+attributeChangedCallback @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7259
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3192
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3589
+removeAttribute @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7258
+appLoad @ VM805003 watch:2
+K @ VM804760 scheduler.js:33
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+L @ VM804760 scheduler.js:29
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+parkOrScheduleJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11703
+scheduleAppLoad @ VM805003 watch:1
+(anonymous) @ VM805003 watch:2
+VM805029 content.js:2866 Patching worker!
+VM805029 content.js:2866 Refused to create a worker from 'blob:https://www.youtube.com/1bbfd950-2bbe-4f93-9d35-fa305445f4a8' because it violates the following Content Security Policy directive: "script-src 'unsafe-eval' 'self' 'unsafe-inline' https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://www.youtube.com https://google.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com". Note that 'worker-src' was not explicitly set, so 'script-src' is used as a fallback.
+
+(anonymous) @ VM805029 content.js:2866
+(anonymous) @ VM805029 content.js:2867
+(anonymous) @ VM805029 content.js:5510
+VM805029 content.js:2866 Failed to create dummy worker for validation: SecurityError: Failed to construct 'Worker': Access to the script at 'blob:https://www.youtube.com/1bbfd950-2bbe-4f93-9d35-fa305445f4a8' is denied by the document's Content Security Policy.
+    at VM805029 content.js:2866:46681
+    at VM805029 content.js:2867:1152
+    at VM805029 content.js:5510:1662
+VM805029 content.js:2866 Continuing to patch worker!
+[Violation] Potential permissions policy violation: autoplay is not allowed in this document.
+/generate_204?CmHiAQ:1  GET https://www.youtube.com/generate_204?CmHiAQ net::ERR_BLOCKED_BY_CLIENT
+Image
+eval @ VM805132:1
+Ia @ VM805127:1
+W8 @ VM805137:1
+eval @ VM805017:7161
+ut @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+R @ VM805017:7161
+watch:1 Uncaught (in promise) TIMEOUT waiting for function(){const e=[".ytp-right-controls",".vjs-control-bar",".shaka-bottom-controls",".html5-player-chrome",".ypcs-control-buttons-right"];for(const t of e){const e=Array.from(document.querySelectorAll(t)).filter(e=>!s(e));if(e.length>0)return e[e.length-1]}return null}: Error
+    at chrome-extension://mnjggcdmjocbbbhaepdhchncahnbgone/js/content.js:2:162712
+Promise.then
+videoIDChange @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+s @ VM804730 content.js:2
+Promise.then
+l @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+o @ VM804730 content.js:2
+V @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+Promise.then
+t.setupVideoModule @ VM804730 content.js:2
+6069 @ VM804730 content.js:2
+n @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+VM804730 content.js:2 Uncaught (in promise) TIMEOUT waiting for function(){const e=[".ytp-right-controls",".vjs-control-bar",".shaka-bottom-controls",".html5-player-chrome",".ypcs-control-buttons-right"];for(const t of e){const e=Array.from(document.querySelectorAll(t)).filter(e=>!s(e));if(e.length>0)return e[e.length-1]}return null}: Error
+    at chrome-extension://mnjggcdmjocbbbhaepdhchncahnbgone/js/content.js:2:162712
+a @ VM804730 content.js:2
+Promise.then
+l @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+o @ VM804730 content.js:2
+gt @ VM804730 content.js:2
+videoIDChange @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+s @ VM804730 content.js:2
+Promise.then
+l @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+o @ VM804730 content.js:2
+V @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+Promise.then
+t.setupVideoModule @ VM804730 content.js:2
+6069 @ VM804730 content.js:2
+n @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+(anonymous) @ VM804730 content.js:2
+VM805146:1 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+eval @ VM805146:1
+Ia @ VM805127:1
+W8 @ VM805137:1
+eval @ VM805017:7161
+ut @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+e @ VM805165:1
+requestIdleCallback
+eval @ VM805146:1
+Ia @ VM805127:1
+W8 @ VM805137:1
+eval @ VM805017:7161
+ut @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+requestIdleCallback.timeout @ VM805017:7161
+requestIdleCallback
+HR @ VM805017:7161
+rV @ VM805017:7161
+qk @ VM805017:7161
+eval @ VM805017:7161
+R @ VM805017:7161
+VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7259 [Violation] 'requestIdleCallback' handler took 75ms
+www.google.com/pagead/lvz?evtid=ACd6KtwqhxXQ6lSkdZ5YyPGtlnlEQpC-gNaTmL-ox9jJLDAZXlkXf0InpFCQF3-NhwDRQu_NTWE1nsspAMfKSo_7x8c8zxJjGQ&req_ts=1793090360&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU40puGhcsv6TpQy_t0dzXE-AYgU6Cw:1  GET https://www.google.com/pagead/lvz?evtid=ACd6KtwqhxXQ6lSkdZ5YyPGtlnlEQpC-gNaTmL-ox9jJLDAZXlkXf0InpFCQF3-NhwDRQu_NTWE1nsspAMfKSo_7x8c8zxJjGQ&req_ts=1793090360&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU40puGhcsv6TpQy_t0dzXE-AYgU6Cw net::ERR_BLOCKED_BY_CLIENT
+Image
+R$N @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1717
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1715
+jf3 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21213
+K @ VM804760 scheduler.js:33
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+L @ VM804760 scheduler.js:29
+(anonymous) @ VM804760 scheduler.js:48
+setTimeout
+apply @ VM804708:584
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+www.google.lk/pagead/lvz?evtid=ACd6KtwqhxXQ6lSkdZ5YyPGtlnlEQpC-gNaTmL-ox9jJLDAZXlkXf0InpFCQF3-NhwDRQu_NTWE1nsspAMfKSo_7x8c8zxJjGQ&req_ts=1793090360&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU40puGhcsv6TpQy_t0dzXE-AYgU6Cw:1  GET https://www.google.lk/pagead/lvz?evtid=ACd6KtwqhxXQ6lSkdZ5YyPGtlnlEQpC-gNaTmL-ox9jJLDAZXlkXf0InpFCQF3-NhwDRQu_NTWE1nsspAMfKSo_7x8c8zxJjGQ&req_ts=1793090360&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU40puGhcsv6TpQy_t0dzXE-AYgU6Cw net::ERR_BLOCKED_BY_CLIENT
+Image
+R$N @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1717
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1715
+jf3 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21213
+K @ VM804760 scheduler.js:33
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+L @ VM804760 scheduler.js:29
+(anonymous) @ VM804760 scheduler.js:48
+setTimeout
+apply @ VM804708:584
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+VM804769 base.js:8850 Uncaught Error: Storage: Invalid value was encountered
+    at create (https://www.youtube.com/s/player/dce23b30/player_es6.vflset/en_GB/base.js:8850:64)
+    at OVs.pBQ (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12965:370)
+    at t8f (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12966:14)
+    at OVs.loadNewVideoConfig (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12983:73)
+    at https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981:458
+create @ VM804769 base.js:8850
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12965
+t8f @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12966
+loadNewVideoConfig @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12983
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981
+setTimeout
+apply @ VM804708:584
+OVs @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981
+ggK @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:4042
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13489
+initPlayer_ @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13489
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13484
+Promise.then
+initPlayerContainer_ @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13484
+acquireApi_ @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13483
+update @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13480
+loadVideoWithPlayerResponse @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13478
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3573
+handle @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11822
+processChunk @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11528
+processChunk @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11823
+DvK @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13605
+Uvx @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13619
+e2D @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13617
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13608
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:24083
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5790
+Q_$ @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5801
+HjY @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5800
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5799
+r_i @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1084
+Promise.then
+h$N @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5762
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5761
+Ivv @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5797
+usN @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5788
+Gn6 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5792
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5780
+loadData @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:24082
+ni @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5128
+Pkz @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5164
+LDF @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5168
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6898
+j_z @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1758
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6898
+Y @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6886
+K @ VM804760 scheduler.js:33
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+L @ VM804760 scheduler.js:29
+(anonymous) @ VM804760 scheduler.js:48
+setTimeout
+apply @ VM804708:584
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+[Violation] Forced reflow while executing JavaScript took 39ms
+[Violation] Forced reflow while executing JavaScript took 31ms
+VM804708:1357  GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT
+reflect @ VM804708:1357
+(anonymous) @ VM804708:1193
+apply @ VM804708:1392
+N9N @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1484
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1498
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20788
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5763
+mX9 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20785
+zN9 @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20830
+$I @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20829
+dmr @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20838
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:26260
+K @ VM804760 scheduler.js:33
+R @ VM804760 scheduler.js:42
+(anonymous) @ VM804760 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM804760 scheduler.js:43
+S @ VM804760 scheduler.js:40
+(anonymous) @ VM804760 scheduler.js:37
+setTimeout
+apply @ VM804708:584
+(anonymous) @ VM804760 scheduler.js:43
+(anonymous) @ VM804760 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM804760 scheduler.js:43
+L @ VM804760 scheduler.js:29
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+RIr @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6887
+dim @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6896
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6890
+afterRenderImmediate @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19415
+transition @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6904
+(anonymous) @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19414
+K @ VM804760 scheduler.js:33
+J @ VM804760 scheduler.js:28
+L @ VM804760 scheduler.js:29
+la @ VM804760 scheduler.js:48
+addJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+parkOrScheduleJob @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11703
+initialRender @ VM804999 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19414
+VM804745 appearance.js:701 Preventing YouTube's scripted scrolling for a moment.
+27The resource <URL> was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+VM804745 appearance.js:701 Preventing YouTube's scripted scrolling for a moment.
+VM805574 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM805574 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM805588 content.js:2866 Skipping worker patching for  https://accounts.youtube.com/RotateCookiesPage?origin=https://www.youtube.com&yt_pid=1
+VM804719 content.js:2 [maze-utils/fetcher] detaching
+VM804730 content.js:2 [maze-utils/fetcher] detaching
+VM805574 content.js:2 [maze-utils/fetcher] detaching
+VM805764 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM805775 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM805764 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM805775 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM805770 rc2Contentscript.js:249 Uncaught TypeError: Cannot read properties of null (reading 'scrollHeight')
+    at VM805770 rc2Contentscript.js:249:91
+(anonymous) @ VM805770 rc2Contentscript.js:249
+setInterval
+listenToParent @ VM805770 rc2Contentscript.js:246
+(anonymous) @ VM805770 rc2Contentscript.js:626
+VM805814 base.js:8850 Uncaught Error: Storage: Invalid value was encountered
+    at create (https://www.youtube.com/s/player/dce23b30/player_es6.vflset/en_GB/base.js:8850:64)
+    at playerBootstrap (https://www.youtube.com/watch?v=NWANo9BRz6Y:38:5656)
+    at https://www.youtube.com/watch?v=NWANo9BRz6Y:39:101
+create @ VM805814 base.js:8850
+playerBootstrap @ VM805816 watch:1
+(anonymous) @ VM805816 watch:2
+VM805753:1357  POST https://www.youtube.com/youtubei/v1/log_event?alt=json net::ERR_BLOCKED_BY_CLIENT
+reflect @ VM805753:1357
+(anonymous) @ VM805753:1193
+apply @ VM805753:1392
+qr @ VM805814 base.js:1342
+(anonymous) @ VM805814 base.js:1353
+sr @ VM805814 base.js:1345
+nu @ VM805814 base.js:1606
+l @ VM805814 base.js:1659
+(anonymous) @ VM805814 base.js:1660
+Joa @ VM805814 base.js:1763
+Moa @ VM805814 base.js:1753
+(anonymous) @ VM805814 base.js:1751
+(anonymous) @ VM805814 base.js:918
+yv @ VM805814 base.js:1751
+jpa @ VM805814 base.js:1794
+Lpa @ VM805814 base.js:1836
+Fpa @ VM805814 base.js:1832
+(anonymous) @ VM805814 base.js:1826
+create @ VM805814 base.js:8850
+playerBootstrap @ VM805816 watch:1
+(anonymous) @ VM805816 watch:2
+VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:10125 LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.
+VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3192 [Violation] 'requestAnimationFrame' handler took 69ms
+[Violation] 'requestAnimationFrame' handler took 97ms
+VM805753:1357  GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT
+reflect @ VM805753:1357
+(anonymous) @ VM805753:1193
+apply @ VM805753:1392
+N9N @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1484
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1498
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20788
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5763
+mX9 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20785
+PND @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20799
+QfQ @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21788
+OaL @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21215
+created @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:29390
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1896
+created @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2044
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3425
+_initializeProperties @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7260
+attributeChangedCallback @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7259
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3192
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3589
+removeAttribute @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7258
+appLoad @ VM806048 watch:2
+K @ VM805795 scheduler.js:33
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+L @ VM805795 scheduler.js:29
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+parkOrScheduleJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11703
+scheduleAppLoad @ VM806048 watch:1
+(anonymous) @ VM806048 watch:2
+VM806073 content.js:2866 Patching worker!
+VM806073 content.js:2866 Refused to create a worker from 'blob:https://www.youtube.com/ec05d546-a9e0-4004-abe0-43a993abf8c4' because it violates the following Content Security Policy directive: "script-src 'unsafe-eval' 'self' 'unsafe-inline' https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://www.youtube.com https://google.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com". Note that 'worker-src' was not explicitly set, so 'script-src' is used as a fallback.
+
+(anonymous) @ VM806073 content.js:2866
+(anonymous) @ VM806073 content.js:2867
+(anonymous) @ VM806073 content.js:5510
+VM806073 content.js:2866 Failed to create dummy worker for validation: SecurityError: Failed to construct 'Worker': Access to the script at 'blob:https://www.youtube.com/ec05d546-a9e0-4004-abe0-43a993abf8c4' is denied by the document's Content Security Policy.
+    at VM806073 content.js:2866:46681
+    at VM806073 content.js:2867:1152
+    at VM806073 content.js:5510:1662
+VM806073 content.js:2866 Continuing to patch worker!
+[Violation] Potential permissions policy violation: autoplay is not allowed in this document.
+/generate_204?ZXbH1A:1  GET https://www.youtube.com/generate_204?ZXbH1A net::ERR_BLOCKED_BY_CLIENT
+Image
+eval @ VM806170:1
+Ia @ VM806211:1
+W8 @ VM806165:1
+eval @ VM806062:2947
+ut @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+R @ VM806062:2947
+VM806194:1 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+eval @ VM806194:1
+Ia @ VM806211:1
+W8 @ VM806165:1
+eval @ VM806062:2947
+ut @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+e @ VM806172:1
+requestIdleCallback
+eval @ VM806194:1
+Ia @ VM806211:1
+W8 @ VM806165:1
+eval @ VM806062:2947
+ut @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+requestIdleCallback.timeout @ VM806062:2947
+requestIdleCallback
+HR @ VM806062:2947
+rV @ VM806062:2947
+qk @ VM806062:2947
+eval @ VM806062:2947
+R @ VM806062:2947
+VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7259 [Violation] 'requestIdleCallback' handler took 76ms
+www.google.com/pagead/lvz?evtid=ACd6Ktw6wLKNhdTjmEGqF5lNLe-wUDzuCdOfwGGZaig0yh0pt_qPU4Isr_a_uI2R-MmXzammWMyeKrqL6qsmjDUmbZQ168jtsw&req_ts=1793090413&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU42osfcnbhzitmbXR2tBCuTL7dAaPw:1  GET https://www.google.com/pagead/lvz?evtid=ACd6Ktw6wLKNhdTjmEGqF5lNLe-wUDzuCdOfwGGZaig0yh0pt_qPU4Isr_a_uI2R-MmXzammWMyeKrqL6qsmjDUmbZQ168jtsw&req_ts=1793090413&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU42osfcnbhzitmbXR2tBCuTL7dAaPw net::ERR_BLOCKED_BY_CLIENT
+Image
+R$N @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1717
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1715
+jf3 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21213
+K @ VM805795 scheduler.js:33
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+L @ VM805795 scheduler.js:29
+(anonymous) @ VM805795 scheduler.js:48
+setTimeout
+apply @ VM805753:584
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+www.google.lk/pagead/lvz?evtid=ACd6Ktw6wLKNhdTjmEGqF5lNLe-wUDzuCdOfwGGZaig0yh0pt_qPU4Isr_a_uI2R-MmXzammWMyeKrqL6qsmjDUmbZQ168jtsw&req_ts=1793090413&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU42osfcnbhzitmbXR2tBCuTL7dAaPw:1  GET https://www.google.lk/pagead/lvz?evtid=ACd6Ktw6wLKNhdTjmEGqF5lNLe-wUDzuCdOfwGGZaig0yh0pt_qPU4Isr_a_uI2R-MmXzammWMyeKrqL6qsmjDUmbZQ168jtsw&req_ts=1793090413&pg=MainAppBootstrap%3AWatch&az=1&sigh=AB9vU42osfcnbhzitmbXR2tBCuTL7dAaPw net::ERR_BLOCKED_BY_CLIENT
+Image
+R$N @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1717
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1715
+jf3 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:21213
+K @ VM805795 scheduler.js:33
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+L @ VM805795 scheduler.js:29
+(anonymous) @ VM805795 scheduler.js:48
+setTimeout
+apply @ VM805753:584
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+VM805814 base.js:8850 Uncaught Error: Storage: Invalid value was encountered
+    at create (https://www.youtube.com/s/player/dce23b30/player_es6.vflset/en_GB/base.js:8850:64)
+    at OVs.pBQ (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12965:370)
+    at t8f (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12966:14)
+    at OVs.loadNewVideoConfig (https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12983:73)
+    at https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.R4whlHgnK6c.2021.O/am=AAAAABAAcASQ/d=1/br=1/rs=AGKMywGupwKTu0oQb0JjIi9krMZ7QGt2ww/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981:458
+create @ VM805814 base.js:8850
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12965
+t8f @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12966
+loadNewVideoConfig @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12983
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981
+setTimeout
+apply @ VM805753:584
+OVs @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:12981
+ggK @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:4042
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13489
+initPlayer_ @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13489
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13484
+Promise.then
+initPlayerContainer_ @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13484
+acquireApi_ @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13483
+update @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13480
+loadVideoWithPlayerResponse @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13478
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:3573
+handle @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11822
+processChunk @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11528
+processChunk @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11823
+DvK @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13605
+Uvx @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13619
+e2D @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13617
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:13608
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:24083
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5790
+Q_$ @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5801
+HjY @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5800
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5799
+r_i @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1084
+Promise.then
+h$N @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5762
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5761
+Ivv @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5797
+usN @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5788
+Gn6 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5792
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5780
+loadData @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:24082
+ni @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5128
+Pkz @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5164
+LDF @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5168
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6898
+j_z @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1758
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6898
+Y @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6886
+K @ VM805795 scheduler.js:33
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+L @ VM805795 scheduler.js:29
+(anonymous) @ VM805795 scheduler.js:48
+setTimeout
+apply @ VM805753:584
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+addLowPriorityJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6645
+Adm @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6735
+qzv @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6737
+await in qzv
+useFactory @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19624
+eR @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6595
+resolve @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6599
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2653
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1448
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:2673
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19224
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6933
+Jch @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6945
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6943
+setLoaded @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7044
+setAllModuleInfoString @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:7039
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19679
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19680
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:31874
+watch:1 Uncaught (in promise) TIMEOUT waiting for function(){const e=[".ytp-right-controls",".vjs-control-bar",".shaka-bottom-controls",".html5-player-chrome",".ypcs-control-buttons-right"];for(const t of e){const e=Array.from(document.querySelectorAll(t)).filter(e=>!s(e));if(e.length>0)return e[e.length-1]}return null}: Error
+    at chrome-extension://mnjggcdmjocbbbhaepdhchncahnbgone/js/content.js:2:162712
+Promise.then
+videoIDChange @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+s @ VM805775 content.js:2
+Promise.then
+l @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+o @ VM805775 content.js:2
+V @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+Promise.then
+t.setupVideoModule @ VM805775 content.js:2
+6069 @ VM805775 content.js:2
+n @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+VM805775 content.js:2 Uncaught (in promise) TIMEOUT waiting for function(){const e=[".ytp-right-controls",".vjs-control-bar",".shaka-bottom-controls",".html5-player-chrome",".ypcs-control-buttons-right"];for(const t of e){const e=Array.from(document.querySelectorAll(t)).filter(e=>!s(e));if(e.length>0)return e[e.length-1]}return null}: Error
+    at chrome-extension://mnjggcdmjocbbbhaepdhchncahnbgone/js/content.js:2:162712
+a @ VM805775 content.js:2
+Promise.then
+l @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+o @ VM805775 content.js:2
+gt @ VM805775 content.js:2
+videoIDChange @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+s @ VM805775 content.js:2
+Promise.then
+l @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+o @ VM805775 content.js:2
+V @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+Promise.then
+t.setupVideoModule @ VM805775 content.js:2
+6069 @ VM805775 content.js:2
+n @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+(anonymous) @ VM805775 content.js:2
+[Violation] Forced reflow while executing JavaScript took 33ms
+VM805753:1357  GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT
+reflect @ VM805753:1357
+(anonymous) @ VM805753:1193
+apply @ VM805753:1392
+N9N @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1484
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:1498
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20788
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:5763
+mX9 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20785
+zN9 @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20830
+$I @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20829
+dmr @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:20838
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:26260
+K @ VM805795 scheduler.js:33
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+R @ VM805795 scheduler.js:42
+(anonymous) @ VM805795 scheduler.js:35
+requestIdleCallback
+(anonymous) @ VM805795 scheduler.js:43
+S @ VM805795 scheduler.js:40
+(anonymous) @ VM805795 scheduler.js:37
+setTimeout
+apply @ VM805753:584
+(anonymous) @ VM805795 scheduler.js:43
+(anonymous) @ VM805795 scheduler.js:38
+requestAnimationFrame
+(anonymous) @ VM805795 scheduler.js:43
+L @ VM805795 scheduler.js:29
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+RIr @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6887
+dim @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6896
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6890
+afterRenderImmediate @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19415
+transition @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6904
+(anonymous) @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19414
+K @ VM805795 scheduler.js:33
+J @ VM805795 scheduler.js:28
+L @ VM805795 scheduler.js:29
+la @ VM805795 scheduler.js:48
+addJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:6648
+parkOrScheduleJob @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:11703
+initialRender @ VM806044 m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:19414
+VM805790 appearance.js:701 Preventing YouTube's scripted scrolling for a moment.
+VM805790 appearance.js:701 Preventing YouTube's scripted scrolling for a moment.
+VM806614 content.js:2 [maze-utils/fetcher] attaching: init message sent
+VM806614 content.js:2 [maze-utils/fetcher] election/init concluded - someone claimed leader
+VM806628 content.js:2866 Skipping worker patching for  https://accounts.youtube.com/RotateCookiesPage?origin=https://www.youtube.com&yt_pid=1
+VM805764 content.js:2 [maze-utils/fetcher] detaching
+VM805775 content.js:2 [maze-utils/fetcher] detaching
+VM806614 content.js:2 [maze-utils/fetcher] detaching
+youtube-feed-summariser.user.js:2078 [YTAIS] Visual coordination failed: Error: Gemini request timed out
+    at ontimeout (youtube-feed-summariser.user.js:583:33)
+    at HttpRequested (injected-web.js:1:6781)
+    at Fe (injected-web.js:1:3679)
+    at injected-web.js:1:3444
+produce @ youtube-feed-summariser.user.js:2078
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-3.8-flash failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-3.7-flash failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-3.5-flash failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-3.5-flash-lite failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-3.1-flash-lite failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:1664 [YTAIS] Fact check on gemini-flash-latest failed, trying next: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+runFactCheckPass @ youtube-feed-summariser.user.js:1664
+await in runFactCheckPass
+runFactCheck @ youtube-feed-summariser.user.js:2390
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+youtube-feed-summariser.user.js:2407 [YTAIS] Fact check failed: Error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+    at apiError (youtube-feed-summariser.user.js:541:17)
+    at onload (youtube-feed-summariser.user.js:580:20)
+    at HttpRequested (injected-web.js:1:6781)
+    at Fe (injected-web.js:1:3679)
+    at injected-web.js:1:3444
+runFactCheck @ youtube-feed-summariser.user.js:2407
+await in runFactCheck
+onDone @ youtube-feed-summariser.user.js:2381
+produce @ youtube-feed-summariser.user.js:2098
+Close
+Skip to main content
+YouTube Feed Summariser (Gemini)
+spark
+Gemini
+Gemini 3.8 Flash
+Ran for 4m 11s
+
+summarize_auto
+Action history
+chevron_right
+Here are key actions taken for the app:
+
+edit
+Edited 1 file
+youtube-feed-summariser.user.js
+check_circle
+Paste October 27, 2026 - 3:11PM
+Gemini 3.8 Flash
+Ran for 5m 3s
+
+summarize_auto
+Action history
+chevron_right
+Here are key actions taken for the app:
+
+edit
+Edited 2 files
+youtube-feed-summariser.user.js
+check_circle
+shim.js
+check_circle
+Paste October 27, 2026 - 3:11PM
+Gemini 3.8 Flash
+Ran for 0s
+flag
+Checkpoint
+lightbulb_tips
+Suggestions
+Make changes, add new features, ask for anything

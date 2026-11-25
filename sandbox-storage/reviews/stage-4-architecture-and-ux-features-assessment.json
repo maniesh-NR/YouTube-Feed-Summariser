@@ -1,0 +1,112 @@
+{
+  "stageId": "stage-4-architecture-and-ux-features",
+  "title": "Stage 4 Mixture-of-Experts Adversarial Assessment: Modular Architecture Refactoring, Zero-Drift Core & Core UX Features",
+  "assessedAt": "2026-11-17T12:38:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/App.tsx",
+    "src/components/SimulatorTypes.ts",
+    "src/components/TimestampText.tsx",
+    "src/components/ResponseRatingBar.tsx",
+    "src/components/TtsWaveformVisualizer.tsx",
+    "src/components/FeedSimulatorGrid.tsx",
+    "src/components/TtsControlBar.tsx",
+    "src/components/ReadabilityModal.tsx",
+    "src/components/FloatingSummaryWindow.tsx",
+    "src/components/HistoryDock.tsx",
+    "src/components/SettingsDocsTabs.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "test_menu_and_ui.js",
+    "test_simulator_ui.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-4-01",
+          "severity": "HIGH",
+          "title": "Per-channel rule map & persona key normalization needed prototype-key exclusion and isolated non-executive cache partitioning",
+          "status": "resolved",
+          "resolution": "normalizeChannelRuleKey(), normalizeChannelTitleRules(), and normalizeSummaryPersona() reject __proto__/constructor/prototype keys and unknown preset strings; writeCache()/readCache() isolate non-executive personas under sum:<persona>:<videoId> while preserving backward-compatible sum:<videoId> for executive."
+        },
+        {
+          "id": "SEC-4-02",
+          "severity": "HIGH",
+          "title": "FEAT-02: Reverting a channel with data-dearrow-title from force_ai after global auto-title toggle off fell back to clickbait originalTitle instead of DeArrow title",
+          "status": "resolved",
+          "resolution": "Updated syncDeArrowState() and revertCardToNonAiTitle() in youtube-feed-summariser.user.js to inspect and preserve card/title data-dearrow-title attributes cleanly, ensuring global kill switch restores DeArrow crowd titles immediately (verified in Check 45)."
+        },
+        {
+          "id": "SEC-4-03",
+          "severity": "MEDIUM",
+          "title": "Timestamp seek handler called nonexistent this.showTtsToast() on SummaryWindow and needed strict regex/XSS-free DOM construction",
+          "status": "resolved",
+          "resolution": "Fixed SummaryWindow.seekPlayer() to invoke this.showTtsFeedback() and announceLive(), and verified zero Trusted-Types-unsafe innerHTML/outerHTML sinks in Test #28 alongside offline SVG data-URI asset generation in SimulatorTypes.ts."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 4 eliminates monolith drift risk and validates Trusted-Types safety + persona/channel rule isolation; Stage 5 offline archive bundle & chapter chunking is cleanly unblocked."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-4-01",
+          "severity": "HIGH",
+          "title": "AUD-08: Monolithic 4,422-line src/App.tsx risked logic drift against youtube-feed-summariser.user.js and had follow-up shorthand bug",
+          "status": "resolved",
+          "resolution": "Decomposed src/App.tsx into focused modules under src/components/* (SimulatorTypes, TimestampText, ResponseRatingBar, TtsWaveformVisualizer, FeedSimulatorGrid, TtsControlBar, ReadabilityModal, FloatingSummaryWindow, HistoryDock, SettingsDocsTabs), fixed { q, a: answer } property binding in handleSendFollowUp, exported AdaptiveWindowFlags & persona export metadata, and added Test #34 running youtube-feed-summariser.user.js inside node:vm to assert exact functional parity against src/utils/userscript-helpers.ts."
+        },
+        {
+          "id": "REL-4-02",
+          "severity": "MEDIUM",
+          "title": "Userscript background polling intervals kept node:vm event loop open during Test #34 parity execution",
+          "status": "resolved",
+          "resolution": "Wrapped setTimeout/setInterval handles in src/utils/userscript-helpers.test.ts VM sandbox with .unref() so all 34 unit & zero-drift parity tests complete cleanly in ~343ms."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "34/34 unit & zero-drift parity tests, Vite build, tsc --noEmit, and 476/476 Playwright E2E checks across all 5 suites verify high structural reliability entering Stage 5."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-4-01",
+          "severity": "HIGH",
+          "title": "Round 1 live Chromium visual audit revealed 375px mobile bottom dock left-edge clipping ('istory (1)'), scrolled-away seek banner, and narrow System Prompt header word wrapping",
+          "status": "resolved",
+          "resolution": "Updated HistoryDock.tsx to use justify-start sm:justify-end with flex-1 responsive docked tabs (histLeft=8, zero clipping), anchored [data-seek-banner] visibly below .yt-win-toolbar above .yt-win-body, placed Regenerate cleanly before TtsControlBar, and wrapped the systemInstruction badge row cleanly; verified in Round 2 live Chromium captures at 1440x900 and 375x812 (scrollWidth=375, 0 console errors/warnings)."
+        },
+        {
+          "id": "UX-4-02",
+          "severity": "MEDIUM",
+          "title": "FEAT-01/02/03 accessibility & discoverability across Summary, Transcript Follow-Along Lock, Readability, and Feed cards",
+          "status": "resolved",
+          "resolution": "Added aria-pressed Follow-Along Lock (.yt-follow-along-btn), ARIA live jump announcements ('Jumped to MM:SS'), keyboard-accessible per-channel rule menu (role=menu / menuitemradio) beside .yt-alt-title-btn, and live persona prompt preview updates."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "All Stage 4 UX deliverables (AUD-08, FEAT-01, FEAT-02, FEAT-03) are verified visually and behaviorally across Userscript and Simulator; ready to advance to Stage 5 (stage-5-offline-export-bundle)."
+      }
+    }
+  ]
+}

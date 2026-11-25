@@ -1,0 +1,115 @@
+{
+  "stageId": "stage-1a-autotitle-dearrow-hardening",
+  "title": "Stage 1A Adversarial Assessment: Auto-Title Replacement, DeArrow Coexistence, Settings & TTS Bar Layout",
+  "assessedAt": "2026-11-15T08:45:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/App.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "test_menu_and_ui.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-1A-01",
+          "severity": "HIGH",
+          "title": "Async transcript/AI title generation race could overwrite late-arriving DeArrow title or disabled Settings state",
+          "status": "resolved",
+          "resolution": "Added post-await invariant re-checks inside applyAiTitleToCard() for getAltTitlesEnabled(), isDeArrowPresent(), _userManualOriginal, and per-video altTitleInFlight request deduplication; verified via Check 42e in-flight async race test."
+        },
+        {
+          "id": "SEC-1A-02",
+          "severity": "MEDIUM",
+          "title": "Cross-tab alt_titles_enabled Settings changes could leave background tabs out of sync",
+          "status": "resolved",
+          "resolution": "Registered GM_addValueChangeListener('alt_titles_enabled', ...) in setupCrossTabSync() to update .yt-alt-titles-setting-checkbox and immediately invoke refreshAllFeedCardTitles()."
+        },
+        {
+          "id": "SEC-1A-03",
+          "severity": "LOW",
+          "title": "Title mutation uses textContent via getTitleTextTarget() with _ytaisMutatingTitle re-entry guard",
+          "status": "resolved",
+          "resolution": "Verified zero innerHTML injection surface in setCardTitleText() and safe MutationObserver loop suppression."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 1 Ask pipeline fault-injection & cross-window toast isolation, Stage 2 keyboard/ARIA hardening, and Stage 3 offline bundle export remain properly ordered and gated."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-1A-01",
+          "severity": "BLOCKER",
+          "title": "isDeArrowPresent() checked global #dearrow-styles, window.dearrow, and .cbThumbnailButtonContainer, disabling AI replacement across all non-DeArrow feed cards",
+          "status": "resolved",
+          "resolution": "Scoped isDeArrowPresent() strictly to the individual card/titleEl container and card-level attributes excluding .cbThumbnailButtonContainer; verified in Check 25 & Check 42a."
+        },
+        {
+          "id": "REL-1A-02",
+          "severity": "HIGH",
+          "title": "getCardVideoId() regex limited video IDs to {8,15} chars, truncating longer IDs in DOM state and cache keys",
+          "status": "resolved",
+          "resolution": "Expanded getCardVideoId() capture group to [?&]v=([a-zA-Z0-9_-]{8,32}) and verified across 371/371 E2E checks."
+        },
+        {
+          "id": "REL-1A-03",
+          "severity": "MEDIUM",
+          "title": "Duplicate concurrent feed scans could launch duplicate Gemini title generation requests per video ID",
+          "status": "resolved",
+          "resolution": "Added altTitleInFlight Map deduplicating in-flight generateAlternativeTitle() promises by videoId."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Expanded MutationObserver characterData + attributeFilter observation introduces negligible overhead due to debounced scan/card guards; Stage 1 per-window TTS toast scoping remains clean next step."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-1A-01",
+          "severity": "HIGH",
+          "title": "Default wide (~920px) floating window TTS bar overflowed right border and stacked speed preset buttons vertically",
+          "status": "resolved",
+          "resolution": "Updated .yt-tts-control-bar to flex-wrap rounded-2xl max-w-full min-w-0 and kept .yt-tts-speed-btns nowrap on medium/wide tiers; verified 0 clipping in r2-tts-wide.png and compact 447px resize."
+        },
+        {
+          "id": "UX-1A-02",
+          "severity": "MEDIUM",
+          "title": "Replacing inner text directly on <a id='video-title'> risked wiping nested <yt-formatted-string> nodes used by YouTube/DeArrow",
+          "status": "resolved",
+          "resolution": "Added getTitleTextTarget() preserving nested <yt-formatted-string> / .yt-core-attributed-string elements cleanly; verified in Check 42b."
+        },
+        {
+          "id": "UX-1A-03",
+          "severity": "LOW",
+          "title": "Spec check: Auto-title enabled by default (true), turn-off option visible in both userscript Advanced panel and Simulator top/window settings, persists across reload, leaves DeArrow titles intact",
+          "status": "resolved",
+          "resolution": "Verified end-to-end in live Chromium (cardsTextInitial -> cardsTextOff -> reload -> cardsTextRestored) and Check 42d."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 1–3 roadmap sequencing stays cohesive and preserves strict visual + functional acceptance gates."
+      }
+    }
+  ]
+}

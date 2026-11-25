@@ -1,0 +1,14 @@
+{
+  "id": "snap-20261124-091147-prompt-end",
+  "createdAt": "2026-11-24T09:11:48.081Z",
+  "trigger": "prompt-end",
+  "label": "prompt-end",
+  "stageId": "v2.12-minimized-audio-accent-audit",
+  "fileCount": 141,
+  "archivedEntryCount": 141,
+  "bytes": 9869509,
+  "workspaceDigest": "830964e190000f4a2da82eceb0fb696aeafb460360a40cac18982a283d764e53",
+  "archiveSha256": "6de489b9dc3e362fd0a153c7f0d34227d41cd5ba7edbf850afda7921b4bee5e6",
+  "archivePath": "sandbox-storage/backups/snap-20261124-091147-prompt-end.tar.gz",
+  "verified": true
+}

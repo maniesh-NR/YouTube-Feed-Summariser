@@ -1,0 +1,109 @@
+{
+  "stageId": "stage-1-ask-pipeline-resilience",
+  "title": "Stage 1 Mixture-of-Experts Adversarial Assessment: Ask Pipeline Fault Tolerance, Simulator State Isolation & Quick-Win Fixes",
+  "assessedAt": "2026-11-16T13:05:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "src/App.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "youtube-feed-summariser.user.js",
+    "test_ask_and_images.js",
+    "test_menu_and_ui.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-1-01",
+          "severity": "MEDIUM",
+          "title": "JSON.parse('{\"__proto__\":true}') on localStorage 'yt_compact_options_expanded' could introduce prototype-key pollution if unguarded",
+          "status": "resolved",
+          "resolution": "Hardened normalizeCompactOptionsMap() in src/utils/userscript-helpers.ts to explicitly drop '__proto__', 'constructor', and 'prototype' keys before constructing state object; verified in unit test #23."
+        },
+        {
+          "id": "SEC-1-02",
+          "severity": "LOW",
+          "title": "Simultaneous per-window ttsToastTimersRef timers could fire stale updates after individual window closeWindow(id) or component unmount",
+          "status": "resolved",
+          "resolution": "closeWindow(id) clears the exact videoId entry in ttsToastTimersRef.current and deletes ttsToasts[id], while useEffect cleanup clears all active timer handles on unmount."
+        },
+        {
+          "id": "SEC-1-03",
+          "severity": "LOW",
+          "title": "Simulator Fault Injection wrapper in test_ask_and_images.js Case 13 & Case 14 mutates window.GM_xmlhttpRequest",
+          "status": "resolved",
+          "resolution": "Both Case 13 and Case 14 immediately restore original window.GM_xmlhttpRequest after job resolution so downstream suites execute cleanly against default shim behavior."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 2 Trusted Types CSP zero-innerHTML gate (AUD-03), bounded LRU storage eviction (AUD-01), and Stage 3 non-blocking Shadow DOM toasts + resize-listener cleanup remain properly sequenced next priorities."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-1-01",
+          "severity": "HIGH",
+          "title": "AUD-05: Offline/empty-transcript fallback in generateAlternativeTitle() returned and cached raw clickbait originalTitle when cleanLines.length === 0",
+          "status": "resolved",
+          "resolution": "Tracked generatedFromContent flag and removed originalTitle self-fallback in generateAlternativeTitle(); added pure shouldCacheGeneratedAltTitle() helper (unit test #22) and Playwright Check 42f confirming alt_title:<videoId> stays null."
+        },
+        {
+          "id": "REL-1-02",
+          "severity": "MEDIUM",
+          "title": "AUD-07: Global 1s monitor setInterval wrote win.commit(true) every 1000ms instead of CONFIG.heartbeatMs (5000ms), amplifying GM storage writes 5x",
+          "status": "resolved",
+          "resolution": "Gated active-job heartbeat commit inside the 1s monitor loop on now - (win._lastHbWriteTs || 0) >= CONFIG.heartbeatMs (5000ms production / 300ms fast test harness), preserving cross-tab staleness checks cleanly."
+        },
+        {
+          "id": "REL-1-03",
+          "severity": "HIGH",
+          "title": "Ask pipeline multi-hop fallback (Ask -> Pro 429 -> Flash) and full ladder exhaustion lacked automated E2E fault-injection coverage",
+          "status": "resolved",
+          "resolution": "Added Case 13 (Ask fail + simulated Pro 429 -> gemini-3.8-flash completion with both diagnostic notes) and Case 14 (full 429 ladder exhaustion -> clean status === 'error', busy === false) in test_ask_and_images.js (Suite 4: 41/41 passing)."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 2 feed MutationObserver characterData noise filtering (AUD-02) and /shorts/<id> + recycled card dataset.ytaisVideoId tracking (AUD-04) cleanly target remaining scalability bottlenecks."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-1-01",
+          "severity": "HIGH",
+          "title": "Single global ttsToast in App.tsx bled toast notifications across unrelated open floating windows during multi-window usage",
+          "status": "resolved",
+          "resolution": "Replaced single toast state with per-window ttsToasts[videoId] map and scoped rendering ([data-toast-video-id={videoId}]); verified in live Chromium r3-stage1-toasts.png showing toast strictly in Window 2 (0 in Window 1)."
+        },
+        {
+          "id": "UX-1-02",
+          "severity": "MEDIUM",
+          "title": "Compact window 'Options' disclosure toggle reset on page reload",
+          "status": "resolved",
+          "resolution": "Persisted compactOptionsExpanded under localStorage 'yt_compact_options_expanded' validated by normalizeCompactOptionsMap(); verified Options ▴ remains expanded after reload in r3-stage1-compact-persist.png with 0 console errors/warnings."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 3 accessibility (north/corner resize handles, keyboard arrow window ergonomics, ARIA live regions) and Stage 4 timestamp jump-sync + channel allow/exempt lists follow cleanly once Stage 2 DOM/storage hardening completes."
+      }
+    }
+  ]
+}

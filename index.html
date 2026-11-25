@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Feed Summariser (Gemini)</title>
+    <meta name="description" content="Tampermonkey userscript v2.12.0 with voice pitch customization (0.5x-2.0x), Readability JSON transcript summary export with rich metadata, YouTube Dark/Light theme synchronization, and dynamic TTS transcript line highlighting." />
+    <meta property="og:title" content="YouTube Feed Summariser (Gemini)" />
+    <meta property="og:description" content="Tampermonkey userscript v2.12.0 with voice pitch customization (0.5x-2.0x), Readability JSON transcript summary export with rich metadata, YouTube Dark/Light theme synchronization, and dynamic TTS transcript line highlighting." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var raw = String(localStorage.getItem('yt_app_theme_mode') || '').trim().toLowerCase();
+          var mode = raw === 'light' || raw === 'dark' || raw === 'system' ? raw : 'system';
+          var sysDark =
+            typeof window.matchMedia === 'function' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var eff = mode === 'dark' ? 'dark' : mode === 'light' ? 'light' : sysDark ? 'dark' : 'light';
+          var root = document.documentElement;
+          root.classList.toggle('dark', eff === 'dark');
+          root.dataset.appThemeMode = mode;
+          root.dataset.appTheme = eff;
+          root.style.colorScheme = eff;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

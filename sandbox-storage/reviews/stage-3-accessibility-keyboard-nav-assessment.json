@@ -1,0 +1,97 @@
+{
+  "stageId": "stage-3-accessibility-keyboard-nav",
+  "title": "Stage 3 Mixture-of-Experts Adversarial Assessment: Keyboard Window Ergonomics, ARIA Live Regions, Non-Blocking Toasts & CI Simulator Parity",
+  "assessedAt": "2026-11-16T14:43:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/App.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "test_menu_and_ui.js",
+    "test_pipeline_and_api.js",
+    "test_simulator_ui.js",
+    "run_all_tests.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-3-01",
+          "severity": "HIGH",
+          "title": "AUD-07: Blocking window.alert() in Tampermonkey menu commands and TTS fallback halted thread execution and could leak/stall across frames",
+          "status": "resolved",
+          "resolution": "Replaced all 3 GM_registerMenuCommand alert() dialogs with Shadow DOM Trusted-Types-safe showGlobalToast() + announceLive(), replaced App.tsx toggleTts alert() fallback with scoped showTtsToast(), and added static test #30 guarding zero blocking alert() calls in youtube-feed-summariser.user.js."
+        },
+        {
+          "id": "SEC-3-02",
+          "severity": "MEDIUM",
+          "title": "Suite 3 D_options_test / D_captions_pure request matcher race against concurrent background alt-title :generateContent requests",
+          "status": "resolved",
+          "resolution": "Updated test_pipeline_and_api.js waiters and assertions to filter :generateContent traffic by target video payload so concurrent background alt-title traffic cannot hijack assertions."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 4 decomposition of src/App.tsx and shared core helper parity checks are well-scoped next after closing all Stage 3 blocking dialog and sanitization risks."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-3-01",
+          "severity": "HIGH",
+          "title": "AUD-06: Resize handles registered mousedown listeners without cleanup entries in _interactionCleanup, and window resize events left floating windows un-clamped",
+          "status": "resolved",
+          "resolution": "Tracked every resize-handle mousedown/keydown and window resize listener inside _interactionCleanup so minimize()/close() leaves zero retained handlers (verified in Check 44 via orphaned handle dispatch)."
+        },
+        {
+          "id": "REL-3-02",
+          "severity": "MEDIUM",
+          "title": "Capture-phase TTS global shortcuts intercepted Arrow/Shift+Arrow keystrokes when keyboard-resizing separators or moving the drag grip",
+          "status": "resolved",
+          "resolution": "Guarded setupKeyboardListeners() in youtube-feed-summariser.user.js and handleKeyDown() in src/App.tsx against active .yt-resize-handle / .yt-win-drag-grip elements; verified zero spurious TTS seeks during keyboard move/resize."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Adding Suite 5 Playwright Simulator CI checks inside run_all_tests.js establishes automated regression coverage across all 5 suites (445 total E2E assertions + 30 unit tests)."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-3-01",
+          "severity": "HIGH",
+          "title": "AUD-09: Desktop-to-mobile (<400px) viewport resize left existing Simulator & userscript windows overflowing right edge and .yt-window-box content-box sizing overflowed 375px by 2px",
+          "status": "resolved",
+          "resolution": "Added box-sizing: border-box on .yt-window-box, adaptive marginX=8 bounds clamping below 400px, live viewport resize re-clamping in both youtube-feed-summariser.user.js and src/App.tsx, and max-w-full min-w-0 on compact selects; verified 375x812 live Chromium capture at winLeft=8, winRight=367, scrollWidth=375."
+        },
+        {
+          "id": "UX-3-02",
+          "severity": "MEDIUM",
+          "title": "FEAT-05: Missing north/top-corner resize handles, keyboard arrow move/resize, and ARIA live announcements",
+          "status": "resolved",
+          "resolution": "Implemented all 8 directional resize handles (role=separator, tabindex=0), focusable .yt-win-drag-grip, Arrow (16px) and Shift+Arrow (48px) adjustments via shared applyKeyboardWindowAdjustment(), and polite ARIA live regions in both Shadow DOM and React Simulator."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 4 (App.tsx modularization, shared parity check, timestamp jump-sync, per-channel alt-title rules, summary personas) is ready to execute."
+      }
+    }
+  ]
+}

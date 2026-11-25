@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "currentStageId": "stage-5-offline-export-bundle",
+  "stageStatus": "completed",
+  "nextStageId": null,
+  "latestAuditReport": "sandbox-storage/reviews/multi-team-adversarial-audit-and-roadmap.md",
+  "workflowMode": "adversarial-consensus-gated",
+  "backupMode": "prompt-end-only",
+  "lastBackup": {
+    "id": "snap-20261124-091147-prompt-end",
+    "createdAt": "2026-11-24T09:11:48.081Z",
+    "trigger": "prompt-end",
+    "stageId": "v2.12-minimized-audio-accent-audit",
+    "archivePath": "sandbox-storage/backups/snap-20261124-091147-prompt-end.tar.gz",
+    "archiveSha256": "6de489b9dc3e362fd0a153c7f0d34227d41cd5ba7edbf850afda7921b4bee5e6",
+    "workspaceDigest": "830964e190000f4a2da82eceb0fb696aeafb460360a40cac18982a283d764e53",
+    "fileCount": 141,
+    "bytes": 9869509
+  },
+  "lastVerification": {
+    "unitTests": "passed (38/38 including Zero-Drift Parity & Backup CLI)",
+    "e2eTests": "passed (494/494 across 5 suites)",
+    "build": "passed",
+    "lint": "passed",
+    "browserVisual": "passed (0 console errors/warnings; desktop 1440x900 & mobile 375x812 Round 2 verified)"
+  },
+  "updatedAt": "2026-11-24T09:11:48.081Z"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "YouTube Feed Summariser (Gemini)",
+  "description": "Tampermonkey userscript v2.12.0 with voice pitch customization (0.5x-2.0x), Readability JSON transcript summary export with rich metadata, YouTube Dark/Light theme synchronization, and dynamic TTS transcript line highlighting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

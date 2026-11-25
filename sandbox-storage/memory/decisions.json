@@ -1,0 +1,59 @@
+{
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "area": "cross-tab-sync",
+      "decision": "Guard SummaryWindow.commit() and minimize(skipCommit) with this.closed flag and readCache(..., skipTouch=true) inside syncFromStorage()",
+      "rationale": "Prevents touchCacheIndex() or late minimize commits from resurrecting deleted win:<id> entries inside localStorage.__gm across concurrent tabs.",
+      "verifiedBy": "test_cache_and_tabs.js"
+    },
+    {
+      "id": "DEC-002",
+      "area": "gm-shim-sync",
+      "decision": "Compare JSON.stringify(oldS[l.key]) !== JSON.stringify(newS[l.key]) in shim.js storage event listener",
+      "rationale": "Stops unrelated GM storage mutations from firing spurious sync_ping callbacks in other tabs."
+    },
+    {
+      "id": "DEC-003",
+      "area": "simulator-multi-window",
+      "decision": "Propagate e.stopPropagation() on .yt-win-overflow-btn / .yt-win-overflow-menu and add .yt-win-drag-grip + inline-block header link",
+      "rationale": "Prevents global window click listeners from collapsing overflow menus immediately and guarantees a reliable drag handle even in compact (<540px) windows."
+    },
+    {
+      "id": "DEC-004",
+      "area": "math-latex-rendering",
+      "decision": "Format LaTeX math ($100^\\circ\\text{C}$, \\(...\\) including parenthesized expressions, $$...$$, bare \\circ/\\text) via formatMathSymbolsInText() while preserving currency tokens like $100 to $200",
+      "rationale": "Eliminates raw backslash TeX artifacts across summary UI, exports, and TTS without corrupting financial amounts."
+    },
+    {
+      "id": "DEC-005",
+      "area": "listener-cleanup",
+      "decision": "Remove temporary drag/resize cleanup callbacks from _interactionCleanup on mouseup in youtube-feed-summariser.user.js",
+      "rationale": "Eliminates unbounded closure accumulation across repeated window drag/resize interactions in long-lived YouTube SPA sessions."
+    },
+    {
+      "id": "DEC-006",
+      "area": "sandbox-workflow",
+      "decision": "Prompt-end sandbox backups to /sandbox-storage/backups/ + mandatory 3-role adversarial consensus gate per stage",
+      "rationale": "Ensures deterministic rollback checkpoints after every completed prompt without noisy background timer churn, and prevents unvetted stage progression."
+    },
+    {
+      "id": "DEC-007",
+      "area": "autotitle-dearrow-coexistence",
+      "decision": "Scope isDeArrowPresent() strictly per card/titleEl, preserve nested <yt-formatted-string> via getTitleTextTarget(), expand videoId match to {8,32}, deduplicate in-flight requests via altTitleInFlight, and enforce post-await DeArrow/settings checks",
+      "rationale": "Prevents global DeArrow styles/thumbnail buttons or mid-flight async races from either suppressing AI titles on non-DeArrow cards or clobbering crowdsourced DeArrow titles, while enabling instant Settings reversion across tabs."
+    },
+    {
+      "id": "DEC-008",
+      "area": "csp-observer-and-storage-bounds",
+      "decision": "Eliminate remaining innerHTML sinks (line 6078), enforce persistent GM alt_title_index LRU caps (500 keys), scope MutationObserver away from player/chat ticks, and validate dataset.ytaisVideoId against SPA node recycling",
+      "rationale": "Identified during Stage 1B four-team adversarial audit (AUD-01 to AUD-04) to prevent Trusted Types exceptions on YouTube, persistent GM storage bloat, playback CPU thrash, and stale recycled card titles."
+    },
+    {
+      "id": "DEC-009",
+      "area": "modular-decomposition-zero-drift",
+      "decision": "Decompose src/App.tsx into modular src/components/* and introduce build-time shared-helper parity enforcement with youtube-feed-summariser.user.js alongside FEAT-01..06",
+      "rationale": "Addresses AUD-08 monolith scale (12.1k userscript / 4.2k React) so mathematical, fallback, and title-resolution improvements cannot diverge across edits."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "stageId": "stage-1b-multi-team-audit-and-roadmap",
+  "title": "Stage 1B Comprehensive Multi-Team Adversarial Analysis & Updated Roadmap",
+  "assessedAt": "2026-11-16T04:48:30-08:00",
+  "roadmapExamined": true,
+  "detailedReportPath": "sandbox-storage/reviews/multi-team-adversarial-audit-and-roadmap.md",
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/App.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "shim.js",
+    "harness.js",
+    "test_menu_and_ui.js",
+    "test_cache_and_tabs.js",
+    "test_pipeline_and_api.js",
+    "test_ask_and_images.js",
+    "scripts/sandbox-backup.mjs",
+    "scripts/harness-memory.mjs",
+    "scripts/adversarial-gate.mjs",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "teamAssignments": [
+    {
+      "teamId": "team-alpha",
+      "name": "Security, Concurrency & Storage Integrity",
+      "leadRole": "security-concurrency-skeptic",
+      "challengerRole": "storage-csp-auditor"
+    },
+    {
+      "teamId": "team-beta",
+      "name": "Systems Reliability, DOM Lifecycle & Performance",
+      "leadRole": "reliability-perf-auditor",
+      "challengerRole": "spa-observer-profiler"
+    },
+    {
+      "teamId": "team-gamma",
+      "name": "UX, Accessibility, Visual Craft & Spec Fidelity",
+      "leadRole": "ux-spec-critic",
+      "challengerRole": "a11y-parity-skeptic"
+    },
+    {
+      "teamId": "team-delta",
+      "name": "Architecture, Refactoring & Feature R&D",
+      "leadRole": "architecture-rnd-strategist",
+      "challengerRole": "feature-rnd-challenger"
+    }
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Team Alpha: Security, Concurrency & Storage Integrity (with storage-csp-auditor)",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "AUD-01",
+          "severity": "MEDIUM",
+          "title": "Unbounded persistent GM_setValue alt_title:* / draft:* / response_ratings keys + cache_index overshoot risk",
+          "status": "scheduled_stage_2",
+          "targetStage": "stage-2-dom-spa-storage-hardening",
+          "resolution": "Documented in comprehensive audit & scheduled for bounded persistent alt_title_index LRU (500 keys) and atomic cache eviction cleanup in Stage 2."
+        },
+        {
+          "id": "AUD-03",
+          "severity": "MEDIUM",
+          "title": "Direct innerHTML='' assignment on ttsRateBtn (line 6078) violates YouTube strict Trusted Types CSP",
+          "status": "scheduled_stage_2",
+          "targetStage": "stage-2-dom-spa-storage-hardening",
+          "resolution": "Pinpointed exact line 6078 and scheduled replacement with clearEl() plus automated CI sink check in Stage 2."
+        },
+        {
+          "id": "AUD-05",
+          "severity": "MEDIUM",
+          "title": "Empty-transcript alt-title fallback can cache originalTitle inside setCachedAltTitle() (lines 8710-8723)",
+          "status": "scheduled_stage_1",
+          "targetStage": "stage-1-ask-pipeline-resilience",
+          "resolution": "Root-caused in generateAlternativeTitle() and scheduled no-cache guard in Stage 1."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Expanded Stages 1-5 prioritize CSP Trusted Types safety, bounded persistent storage, and async fault-injection coverage ahead of feature expansion."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Team Beta: Systems Reliability, DOM Lifecycle & Performance (with spa-observer-profiler)",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "AUD-02",
+          "severity": "MEDIUM",
+          "title": "Whole-body characterData MutationObserver on document.body (line 9134) triggers scans during player time ticks",
+          "status": "scheduled_stage_2",
+          "targetStage": "stage-2-dom-spa-storage-hardening",
+          "resolution": "Profiled root cause and scheduled mutation target filtering + player exclusion in Stage 2."
+        },
+        {
+          "id": "AUD-04",
+          "severity": "MEDIUM",
+          "title": "SPA recycled feed cards skip re-processing via WeakSet without checking changed videoId; /shorts/ URLs unsupported",
+          "status": "scheduled_stage_2",
+          "targetStage": "stage-2-dom-spa-storage-hardening",
+          "resolution": "Scheduled dataset.ytaisVideoId drift check & /shorts/ matcher in Stage 2."
+        },
+        {
+          "id": "AUD-07",
+          "severity": "MEDIUM",
+          "title": "1s global heartbeat setInterval writes GM_setValue 5x more frequently than CONFIG.heartbeatMs (5000ms)",
+          "status": "scheduled_stage_1",
+          "targetStage": "stage-1-ask-pipeline-resilience",
+          "resolution": "Scheduled heartbeat commit interval throttle (5000ms) and Stage 1 Ask fault-injection tests (AUD-09)."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 1 Ask ladder fault-injection and Stage 2 observer/SPA lifecycle hardening systematically eliminate runtime overhead and hidden race vectors."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "Team Gamma & Delta: UX, A11y, Architecture & Feature R&D (with a11y-parity-skeptic & feature-rnd-challenger)",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "AUD-06",
+          "severity": "MEDIUM",
+          "title": "Resize handle mousedown listeners omitted from _interactionCleanup; missing north resize & keyboard separator nav",
+          "status": "scheduled_stage_3",
+          "targetStage": "stage-3-accessibility-keyboard-nav",
+          "resolution": "Scheduled in Stage 3 alongside ARIA live regions, non-blocking shadow toasts replacing window.alert(), and integrated Simulator Playwright suite."
+        },
+        {
+          "id": "AUD-08",
+          "severity": "MEDIUM",
+          "title": "Dual-codebase logic drift (12.1k userscript vs 4.2k App.tsx / helpers) and global simulator ttsToast collision",
+          "status": "scheduled_stage_4",
+          "targetStage": "stage-4-architecture-and-ux-features",
+          "resolution": "Per-window simulator toast isolation scheduled in Stage 1; full App.tsx decomposition + zero-drift shared core + FEAT-01/02/03 scheduled in Stage 4."
+        },
+        {
+          "id": "AUD-09",
+          "severity": "LOW",
+          "title": "High-value feature roadmap validated: Timestamp Jump-Sync, Channel Alt-Title Rules, Summary Personas, Chapter Chunking, Markdown Bundle",
+          "status": "scheduled_stage_4_5",
+          "targetStage": "stage-5-offline-export-bundle",
+          "resolution": "All researched enhancements and 6 new features sequenced into Stages 3-5 with clear acceptance criteria."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Updated 5-stage roadmap balances reliability/security debt burn-down cleanly before modular refactoring and high-value UX features."
+      }
+    }
+  ]
+}

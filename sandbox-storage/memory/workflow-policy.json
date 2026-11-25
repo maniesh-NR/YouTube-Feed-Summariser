@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "backupPolicy": {
+    "mode": "prompt-end-only",
+    "fixedIntervalEnabled": false,
+    "alwaysLastStepInExecutionPlan": true,
+    "triggerOnEveryPromptOutput": true,
+    "storageRoot": "sandbox-storage/backups",
+    "maxRetainedSnapshots": 30,
+    "verifyArchiveIntegrity": true,
+    "excludes": [
+      "node_modules",
+      "dist",
+      ".playwright-cli",
+      ".git",
+      "sandbox-storage/backups"
+    ]
+  },
+  "harnessMemoryPolicy": {
+    "memoryRoot": "sandbox-storage/memory",
+    "reviewsRoot": "sandbox-storage/reviews",
+    "appendEpisodesOnMilestones": true,
+    "requireStageGateForProgression": true
+  },
+  "adversarialConsensusPolicy": {
+    "requiredPerStage": true,
+    "minIndependentRoles": 3,
+    "consensusRule": "unanimous-approve-zero-high-blockers",
+    "roles": [
+      {
+        "id": "security-concurrency-skeptic",
+        "title": "Red-Team Security & Concurrency Skeptic",
+        "focus": [
+          "cross-tab storage races",
+          "XSS and HTML sanitization",
+          "async fallback termination bounds",
+          "malformed inputs & storage recovery"
+        ]
+      },
+      {
+        "id": "reliability-perf-auditor",
+        "title": "Systems Reliability & Performance Auditor",
+        "focus": [
+          "event listener / RAF / AudioContext leaks",
+          "DOM observer churn & cache bounds",
+          "unit + Playwright E2E test rigor",
+          "TypeScript compilation & Vite production build"
+        ]
+      },
+      {
+        "id": "ux-spec-critic",
+        "title": "UX, Visual Layout & Spec Compliance Critic",
+        "focus": [
+          "live Chromium visual inspection across viewports",
+          "multi-window drag/resize ergonomics & compact <540px adaptation",
+          "accessibility (aria-pressed, keyboard Escape, contrast)",
+          "math/LaTeX vs currency accuracy"
+        ]
+      }
+    ]
+  }
+}

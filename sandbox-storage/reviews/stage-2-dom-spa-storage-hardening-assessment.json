@@ -1,0 +1,101 @@
+{
+  "stageId": "stage-2-dom-spa-storage-hardening",
+  "title": "Stage 2 Mixture-of-Experts Adversarial Assessment: Trusted Types CSP Safety, Bounded Storage LRU & YouTube SPA Observer Hardening",
+  "assessedAt": "2026-11-16T14:00:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "test_menu_and_ui.js",
+    "test_cache_and_tabs.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-2-01",
+          "severity": "HIGH",
+          "title": "AUD-03: Direct this.ttsRateBtn.innerHTML = '' DOM sink violated YouTube Trusted Types CSP",
+          "status": "resolved",
+          "resolution": "Replaced with clearEl(this.ttsRateBtn) cleanly; added unit test #28 asserting zero .innerHTML / .outerHTML / insertAdjacentHTML / document.write sinks anywhere in youtube-feed-summariser.user.js."
+        },
+        {
+          "id": "SEC-2-02",
+          "severity": "HIGH",
+          "title": "AUD-01: Persistent GM storage alt_title:*, draft:*, and response_ratings grew unboundedly and touchCacheIndex stalled eviction when open windows were present",
+          "status": "resolved",
+          "resolution": "Enforced bounded LRU indices (alt_title_index cap 500, draft_index cap 200, response_ratings cap 500), fixed touchCacheIndex() iteration over sorted evictable keys while preserving open windows, and verified 505-entry LRU eviction in Suite 2."
+        },
+        {
+          "id": "SEC-2-03",
+          "severity": "MEDIUM",
+          "title": "Context menu video ID extraction trusted cached card.dataset.ytaisVideoId ahead of live DOM href",
+          "status": "resolved",
+          "resolution": "Updated menu extraction to resolve live getCardVideoId(card) first before falling back to dataset.ytaisVideoId, eliminating stale ID confusion on recycled SPA cards."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 3 accessibility & non-blocking Shadow DOM toast migration (replacing alert() and adding top/keyboard resize ergonomics) cleanly follows Stage 2 CSP & storage hardening."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-2-01",
+          "severity": "HIGH",
+          "title": "AUD-02: Unfiltered MutationObserver on document.body triggered periodic rescans on player timer / live-chat characterData and self-mutated .yt-alt-title-btn icons",
+          "status": "resolved",
+          "resolution": "Implemented isFeedMutationRelevant() filtering player/live-chat subtrees, made updateSwitchButtonUI() idempotent via ytaisBtnMode/title checks, and added _ytaisSelfMutatedTs echo guard; verified 0 scans during noise mutations in Check 43d."
+        },
+        {
+          "id": "REL-2-02",
+          "severity": "MEDIUM",
+          "title": "Batch alt-title generation lacked per-model HTTP 429 cooldown circuit breaker and decorrelated jitter backoff",
+          "status": "resolved",
+          "resolution": "Added modelCooldowns Map + computeDecorrelatedJitterDelay() + multi-flash failover loop in generateAlternativeTitle(); verified in unit test #26 and Check 43e."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 3 listener tracking cleanup on resize handles (_interactionCleanup) and CI simulator regression spec in run_all_tests.js remain critical stability steps before Stage 4 modularization."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-2-01",
+          "severity": "MEDIUM",
+          "title": "AUD-04: Processed YouTube feed cards kept stale _originalTitle / _aiTitle / badge buttons on SPA node recycling and ignored /shorts/<id> URLs",
+          "status": "resolved",
+          "resolution": "Extended getCardVideoId() for /shorts/ and /live/ URLs ({8,32}), added resetRecycledFeedCardState() stripping stale badges and '[AI Summary Title]' tooltips when card videoId changes; verified in Check 43b & 43c."
+        },
+        {
+          "id": "UX-2-02",
+          "severity": "LOW",
+          "title": "Live Chromium verification of 1.5x TTS rate badge rendering and SPA dock restore after Stage 2 edits",
+          "status": "resolved",
+          "resolution": "Verified cleanly in live Chromium r4-stage2-spa-stress.png with 0 console errors or warnings."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stages 3-5 roadmap sequence (A11y/Keyboard/CI parity -> Modular React/Userscript zero-drift + FEAT-01..03 -> Long-video chunking & export bundles) stays coherent and ready."
+      }
+    }
+  ]
+}

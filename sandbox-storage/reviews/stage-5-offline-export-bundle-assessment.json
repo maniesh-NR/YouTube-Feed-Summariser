@@ -1,0 +1,107 @@
+{
+  "stageId": "stage-5-offline-export-bundle",
+  "title": "Stage 5 Mixture-of-Experts Adversarial Assessment: Chapter-Aware Long-Video Chunking, Offline Markdown/Obsidian Bundle & Backup Diffing",
+  "assessedAt": "2026-11-18T14:35:00.000Z",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "src/components/SimulatorTypes.ts",
+    "src/components/FloatingSummaryWindow.tsx",
+    "src/components/ReadabilityModal.tsx",
+    "src/components/SettingsDocsTabs.tsx",
+    "src/App.tsx",
+    "scripts/sandbox-backup.mjs",
+    "test_menu_and_ui.js",
+    "test_simulator_ui.js",
+    "sandbox-storage/memory/roadmap.json"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-5-01",
+          "severity": "HIGH",
+          "title": "Selective backup restore CLI needed strict path-traversal, symlink-escape, and out-of-root write rejection",
+          "status": "resolved",
+          "resolution": "Implemented validateSafeRelPath() and safe extraction containment checks inside scripts/sandbox-backup.mjs so '--restore <snap|latest> --file=<relPath>' rejects leading slashes, '..' segments, Windows separators, and symlink targets outside ROOT, verified by unit Test #38 ('../../etc/passwd' rejection and dry-run safety)."
+        },
+        {
+          "id": "SEC-5-02",
+          "severity": "MEDIUM",
+          "title": "YAML frontmatter & Markdown export needed strict escaping and currency-safe Unicode normalization without unsafe HTML sinks",
+          "status": "resolved",
+          "resolution": "formatSummaryExportMarkdown() escapes YAML string scalars cleanly, applies formatMathSymbolsInText() while preserving currency literals (e.g. $45 / $1,250.00), sanitizes obsidian tag slugs, and uses Blob/download triggers with zero innerHTML/outerHTML/document.write sinks (verified in Test #28 & Test #37)."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 5 closes the final roadmap deliverables (FEAT-04, FEAT-06, and backup diffing/selective restore) cleanly with bounded archive validation and zero Trusted-Types regressions."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-5-01",
+          "severity": "HIGH",
+          "title": "Zero-Drift Parity (Test #34) caught missing parseTimestampToSeconds() inside youtube-feed-summariser.user.js VM scope",
+          "status": "resolved",
+          "resolution": "Added parseTimestampToSeconds(tsStr) directly above formatSecondsToTimestamp() in youtube-feed-summariser.user.js matching src/utils/userscript-helpers.ts behavior; re-ran Test #34 plus new Tests #35-#38 with 38/38 passing."
+        },
+        {
+          "id": "REL-5-02",
+          "severity": "HIGH",
+          "title": "Check 46 invoked non-existent saveResponseRating() helper and called openExportMenu() without default anchor guard",
+          "status": "resolved",
+          "resolution": "Hardened openExportMenu(anchorEl) in youtube-feed-summariser.user.js to default safely to this.exportBtn || this.win when invoked programmatically, updated Check 46 to use setResponseRating() and click .yt-win-export-btn, and bumped tar maxBuffer to 25MB in sandbox-backup.mjs."
+        },
+        {
+          "id": "REL-5-03",
+          "severity": "MEDIUM",
+          "title": "Long-video (>45m / >2700s) map-reduce chunking needed bounded sequential map passes with chapter preservation",
+          "status": "resolved",
+          "resolution": "buildLongVideoTranscriptChunks() groups cues cleanly by extracted chapters (or timed intervals fallback) with bounded chunk sizes and sequential map prompts reduced via buildChunkReducePrompt() in produce(win, job), persisting chapters into cache and summary state."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "All unit tests (38/38), TypeScript lint, Vite production build, and Playwright E2E suites (494/494 across 5 suites) verify end-to-end reliability across userscript, simulator, and backup CLI."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-5-01",
+          "severity": "HIGH",
+          "title": "Round 1 live Chromium inspection identified compact (<540px) toolbar and seek-banner vertical padding crowding alongside multi-chapter bar",
+          "status": "resolved",
+          "resolution": "Tightened compact .yt-win-toolbar (px-3 py-2 gap-1.5) and .yt-seek-banner (px-3 py-1.5) spacing in FloatingSummaryWindow.tsx and verified in Round 2 live Chromium captures at 1440x900 (4 clickable chapters synced to [31:10] seek) and 375x812 (scrollWidth=375, zero horizontal overflow, zero console errors/warnings)."
+        },
+        {
+          "id": "UX-5-02",
+          "severity": "MEDIUM",
+          "title": "Offline Markdown/Obsidian (.md) export discoverability across floating window, overflow menu, and Readability modal",
+          "status": "resolved",
+          "resolution": "Exposed .yt-export-md-btn on floating windows, .yt-overflow-export-md-btn / Export (.txt / .pdf / .json / .md) option in overflow menus, and .yt-readability-export-md-btn in Readability mode, each exporting YAML frontmatter, timestamp deep links, chapters, fact-check, follow-up Q&A, and ratings."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 5 fulfills FEAT-04 and FEAT-06 visually and functionally in both Userscript and React Simulator, completing the roadmap."
+      }
+    }
+  ]
+}

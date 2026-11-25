@@ -1,0 +1,129 @@
+{
+  "stageId": "stage-0-baseline-examination",
+  "title": "Stage 0 Comprehensive Adversarial Assessment: Work Done So Far & Future Roadmap",
+  "assessedAt": "2026-11-14T04:47:00-08:00",
+  "roadmapExamined": true,
+  "scopeReviewed": [
+    "youtube-feed-summariser.user.js",
+    "src/App.tsx",
+    "src/utils/userscript-helpers.ts",
+    "src/utils/userscript-helpers.test.ts",
+    "shim.js",
+    "test_menu_and_ui.js",
+    "test_cache_and_tabs.js",
+    "test_pipeline_and_api.js",
+    "test_ask_and_images.js",
+    "sandbox-storage/memory/roadmap.json",
+    "scripts/sandbox-backup.mjs",
+    "scripts/harness-memory.mjs",
+    "scripts/adversarial-gate.mjs"
+  ],
+  "roleReviews": [
+    {
+      "roleId": "security-concurrency-skeptic",
+      "roleTitle": "Red-Team Security & Concurrency Skeptic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "SEC-01",
+          "severity": "HIGH",
+          "title": "Cross-tab close race resurrected deleted win:<id> cache entries",
+          "status": "resolved",
+          "resolution": "Added this.closed guard in SummaryWindow.commit()/minimize(skipCommit), close(fromSync) flag, skipTouch=true inside syncFromStorage(), and JSON diff check in shim.js."
+        },
+        {
+          "id": "SEC-02",
+          "severity": "MEDIUM",
+          "title": "Inline \\(...\\) LaTeX regex truncated expressions containing inner parentheses",
+          "status": "resolved",
+          "resolution": "Updated inline math regex to /\\\\\\(([^\\n]+?)\\\\\\)/g across src/utils/userscript-helpers.ts and youtube-feed-summariser.user.js, plus unit test assertion."
+        },
+        {
+          "id": "SEC-03",
+          "severity": "LOW",
+          "title": "Fixed-interval backup flags could bypass prompt-end backup discipline",
+          "status": "resolved",
+          "resolution": "scripts/sandbox-backup.mjs rejects --interval, --cron, and --watch with exit code 2 and verifies every archive via SHA-256 + tar -tzf."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 1 ask-ladder fault-injection E2E coverage and Stage 3 backup diffing harden failover bounds and supply integrity without introducing untrusted eval/HTML injection surfaces."
+      }
+    },
+    {
+      "roleId": "reliability-perf-auditor",
+      "roleTitle": "Systems Reliability & Performance Auditor",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "REL-01",
+          "severity": "HIGH",
+          "title": "_interactionCleanup accumulated stale closures on every drag and resize operation",
+          "status": "resolved",
+          "resolution": "Refactored onHeaderDown and onResizeDown in youtube-feed-summariser.user.js to splice out completed cleanupDrag/cleanupResize callbacks inside onUp."
+        },
+        {
+          "id": "REL-02",
+          "severity": "MEDIUM",
+          "title": "Simulator floating window header overflow never activated due to adaptive flag typo",
+          "status": "resolved",
+          "resolution": "Corrected adaptive.collapseHeaderActions to adaptive.useOverflowHeaderMenu in src/App.tsx line 2193 and verified in live Chromium."
+        },
+        {
+          "id": "REL-03",
+          "severity": "LOW",
+          "title": "TTS toast state in simulator is shared globally across open windows",
+          "status": "deferred_to_stage_1",
+          "resolution": "Logged in roadmap Stage 1 (stage-1-ask-pipeline-resilience) for per-window scoped toast isolation; zero functional impact on single-speaker TTS flow."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Stage 1 per-window toast scoping and Stage 2 mobile/keyboard stress tests directly target remaining multi-window edge cases while keeping BoundedMemoryCache and RAF cleanup strict."
+      }
+    },
+    {
+      "roleId": "ux-spec-critic",
+      "roleTitle": "UX, Visual Layout & Spec Compliance Critic",
+      "verdict": "APPROVE",
+      "confidence": "high",
+      "findings": [
+        {
+          "id": "UX-01",
+          "severity": "HIGH",
+          "title": "MOCK_VIDEOS[1] summary template literal stripped backslash from \\circ and interpreted \\t as TAB",
+          "status": "resolved",
+          "resolution": "Double-escaped $100^\\\\circ\\\\text{C}$ and $87^\\\\circ\\\\text{C}$ in src/App.tsx; visually confirmed '100°C' and '87°C' in live Chromium screenshot."
+        },
+        {
+          "id": "UX-02",
+          "severity": "MEDIUM",
+          "title": "Compact (<540px) window headers lacked guaranteed drag grip and TTS speed slider touched right border",
+          "status": "resolved",
+          "resolution": "Added .yt-win-drag-grip (GripVertical) in .yt-win-header and wrapped .yt-tts-speed-wrap / .yt-tts-speed-btns with flex-wrap; visually verified side-by-side compact + medium windows in r1-multi-compact.png."
+        },
+        {
+          "id": "UX-03",
+          "severity": "LOW",
+          "title": "Keyboard-only arrow resize on separator handles not yet implemented",
+          "status": "deferred_to_stage_2",
+          "resolution": "Scheduled in roadmap Stage 2 (stage-2-accessibility-keyboard-nav) alongside ARIA live-region announcements."
+        }
+      ],
+      "roadmapReview": {
+        "status": "endorsed",
+        "notes": "Roadmap Stages 1–3 logically sequence multi-window polish, keyboard/ARIA accessibility, and offline export bundling with unanimous consensus gates required at each boundary."
+      }
+    }
+  ],
+  "consensusSummary": {
+    "requiredRoles": 3,
+    "approvals": 3,
+    "unresolvedBlockers": 0,
+    "unresolvedHigh": 0,
+    "unanimousConsensus": true
+  }
+}

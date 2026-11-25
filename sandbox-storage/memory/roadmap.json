@@ -1,0 +1,207 @@
+{
+  "currentStageId": "stage-5-offline-export-bundle",
+  "stages": [
+    {
+      "id": "stage-0-baseline-examination",
+      "title": "Stage 0: Baseline Audit, Live Chromium Signoff & Adversarial Examination of Work Done So Far",
+      "status": "completed",
+      "scope": [
+        "Dynamic audio waveform visualizer in TTS bar",
+        "Automatic YouTube Ask model-ladder fallback",
+        "Configurable bottom-right History tab dock visibility (always / with_tabs / never)",
+        "Persistent Thumbs-Up / Thumbs-Down response ratings with notes and JSON export metadata",
+        "Multi-window floating summary containers with drag/resize, z-index focus, and per-window Escape",
+        "Adaptive responsive window layouts & menus (compact <540px, medium 540-779px, wide >=780px, short <460px)",
+        "LaTeX/math symbol formatting ($100^\\circ\\text{C}$ -> 100°C) preserving currency",
+        "Adversarial fixes: parenthesized \\(...\\) regex, drag/resize cleanup leak removal, compact drag grip"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-multi-window"
+      ],
+      "consensusRequired": true,
+      "completedAt": "2026-11-14T12:47:42.912Z"
+    },
+    {
+      "id": "stage-1a-autotitle-dearrow-hardening",
+      "title": "Stage 1A: Auto-Title Replacement, DeArrow Coexistence, Settings & Wide TTS Bar Layout Hardening",
+      "status": "completed",
+      "dependsOn": "stage-0-baseline-examination",
+      "scope": [
+        "Fix global isDeArrowPresent() detection bug (#dearrow-styles / window.dearrow / thumbnail-only button falsely suppressing AI replacement across unrelated cards)",
+        "Fix getCardVideoId() ID truncation ({8,15} -> {8,32}) and preserve nested <yt-formatted-string> / .yt-core-attributed-string elements inside title links",
+        "Harden syncDeArrowState() + post-await guards in applyAiTitleToCard() for late & mid-flight DeArrow arrivals without losing _originalTitle",
+        "Deduplicate concurrent AI title requests via altTitleInFlight and deploy auto-title replacement ON by default with immediate Settings toggle reversion + cross-tab GM_addValueChangeListener sync",
+        "Fix wide floating window (~920px) TTS control bar overflow and speed pill vertical stacking in App.tsx",
+        "Unit test #21 + Playwright E2E Check 25 & Check 42 (21 assertions including 42a-42e async race) + live Chromium visual & persistence signoff"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-autotitle-dearrow"
+      ],
+      "consensusRequired": true,
+      "completedAt": "2026-11-15T08:45:00.000Z"
+    },
+    {
+      "id": "stage-1b-multi-team-audit-and-roadmap",
+      "title": "Stage 1B: Multi-Team Adversarial Progress Retrospective, Issue Research & Roadmap Evolution",
+      "status": "completed",
+      "dependsOn": "stage-1a-autotitle-dearrow-hardening",
+      "scope": [
+        "Four adversarial multi-role teams audited 23,037 LOC across userscript, React simulator, pure helpers, and Playwright suites",
+        "Cataloged 9 new open technical findings (AUD-01 through AUD-09) with exact line-level root causes",
+        "Researched concrete architectural fixes & 6 prioritized new features (FEAT-01 through FEAT-06)",
+        "Published master dossier at sandbox-storage/reviews/multi-team-adversarial-audit-and-roadmap.md"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "build:vite",
+        "lint:tsc"
+      ],
+      "consensusRequired": true,
+      "completedAt": "2026-11-16T04:49:00-08:00"
+    },
+    {
+      "id": "stage-1-ask-pipeline-resilience",
+      "title": "Stage 1: Ask Pipeline Fault Tolerance, Simulator State Isolation & Quick-Win Fixes",
+      "status": "completed",
+      "dependsOn": "stage-1b-multi-team-audit-and-roadmap",
+      "targetsFindings": [
+        "AUD-05",
+        "AUD-07",
+        "AUD-09"
+      ],
+      "scope": [
+        "Per-window scoped ttsToast notifications and persisted compactOptionsExpanded state in src/App.tsx",
+        "Automated Playwright regression tests exercising Ask HTTP 429/timeout faults -> ladder fallback notes in test_ask_and_images.js",
+        "Prevent clickbait self-caching when offline/empty-transcript fallback produces originalTitle (AUD-05)",
+        "Throttle global heartbeat commit writes from 1s to CONFIG.heartbeatMs 5s (AUD-07)"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-multi-window"
+      ],
+      "consensusRequired": true,
+      "startedAt": "2026-11-14T12:47:42.912Z",
+      "completedAt": "2026-11-16T13:05:36.064Z"
+    },
+    {
+      "id": "stage-2-dom-spa-storage-hardening",
+      "title": "Stage 2: Trusted Types CSP Safety, Bounded Storage LRU & YouTube SPA Observer Hardening",
+      "status": "completed",
+      "dependsOn": "stage-1-ask-pipeline-resilience",
+      "targetsFindings": [
+        "AUD-01",
+        "AUD-02",
+        "AUD-03",
+        "AUD-04"
+      ],
+      "scope": [
+        "Replace direct ttsRateBtn.innerHTML='' with clearEl() + add CI zero-innerHTML Trusted Types sink check (AUD-03)",
+        "Enforce persistent bounded LRU eviction (alt_title_index max 500 keys, draft cap, clean cache_index pruning) in GM storage (AUD-01)",
+        "Filter watch-page player/live-chat characterData noise in feed MutationObserver (AUD-02)",
+        "Support SPA recycled feed card re-processing via dataset.ytaisVideoId check + /shorts/<id> URL extraction (AUD-04)",
+        "Add decorrelated jitter + per-model Retry-After cooldown circuit breaker on batch feed alt-title calls"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-spa-stress"
+      ],
+      "consensusRequired": true,
+      "startedAt": "2026-11-16T13:05:36.064Z",
+      "completedAt": "2026-11-16T14:01:16.781Z"
+    },
+    {
+      "id": "stage-3-accessibility-keyboard-nav",
+      "title": "Stage 3: Keyboard Window Ergonomics, ARIA Live Regions, Non-Blocking Toasts & CI Simulator Parity",
+      "status": "completed",
+      "dependsOn": "stage-2-dom-spa-storage-hardening",
+      "targetsFindings": [
+        "AUD-06",
+        "AUD-07",
+        "AUD-09",
+        "FEAT-05"
+      ],
+      "scope": [
+        "Track resize-handle mousedown cleanup in _interactionCleanup, add north/top-corner resize handles, and add keyboard arrow resize/move on grip & separators (AUD-06, FEAT-05)",
+        "Replace blocking window.alert() menu dialogs with non-blocking Shadow DOM toast banners (AUD-07)",
+        "Add ARIA live-region announcements for minimize/restore, rating persistence, and Ask fallback transitions (FEAT-05)",
+        "Mobile narrow viewport (<400px) stress suite + automated Simulator React Playwright regression spec inside run_all_tests.js (AUD-09)"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-mobile-desktop"
+      ],
+      "consensusRequired": true,
+      "startedAt": "2026-11-16T14:01:16.781Z",
+      "completedAt": "2026-11-17T11:48:39.195Z"
+    },
+    {
+      "id": "stage-4-architecture-and-ux-features",
+      "title": "Stage 4: Modular Architecture Refactoring, Zero-Drift Core & Core UX Features",
+      "status": "completed",
+      "dependsOn": "stage-3-accessibility-keyboard-nav",
+      "targetsFindings": [
+        "AUD-08",
+        "FEAT-01",
+        "FEAT-02",
+        "FEAT-03"
+      ],
+      "scope": [
+        "Decompose 4,233-line src/App.tsx into modular src/components/* modules and introduce shared helper parity check preventing userscript/React logic drift (AUD-08)",
+        "FEAT-01: Interactive timestamp [MM:SS] jump-sync + active TTS transcript cue auto-scroll with Follow-Along lock",
+        "FEAT-02: Per-channel Auto-Title allow/exempt rules right from card action tooltips",
+        "FEAT-03: Summary Persona & output format presets (Executive Brief, Deep Technical/Code, Study Quiz, Chronological)"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc",
+        "browser:chromium-multi-window"
+      ],
+      "consensusRequired": true,
+      "startedAt": "2026-11-17T11:48:39.195Z",
+      "completedAt": "2026-11-17T12:39:57.072Z"
+    },
+    {
+      "id": "stage-5-offline-export-bundle",
+      "title": "Stage 5: Chapter-Aware Long-Video Chunking, Offline Markdown/Obsidian Bundle & Backup Diffing",
+      "status": "completed",
+      "dependsOn": "stage-4-architecture-and-ux-features",
+      "targetsFindings": [
+        "FEAT-04",
+        "FEAT-06"
+      ],
+      "scope": [
+        "FEAT-04: Chapter-aware synthesis chunking (>45 min transcripts) with clickable chapter pills",
+        "FEAT-06: Self-contained Markdown/Obsidian + Q&A + thumbs-up/down ratings archive bundle export preserving Unicode/math text",
+        "Content-level diffing & selective file restore CLI subcommands inside scripts/sandbox-backup.mjs"
+      ],
+      "requiredChecks": [
+        "unit:tsx-helpers",
+        "e2e:run_all_tests",
+        "build:vite",
+        "lint:tsc"
+      ],
+      "consensusRequired": true,
+      "startedAt": "2026-11-17T12:39:57.072Z",
+      "completedAt": "2026-11-18T14:36:25.000Z"
+    }
+  ]
+}

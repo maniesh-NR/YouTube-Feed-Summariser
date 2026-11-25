@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Plus Jakarta Sans", "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --md-color-scheme: light;
+  --md-sys-color-surface: #f9f9ff;
+  --md-sys-color-surface-container-low: #f3f3fa;
+  --md-sys-color-surface-container: #ededf4;
+  --md-sys-color-surface-container-high: #e7e8ee;
+  --md-sys-color-surface-container-highest: #e1e2e9;
+  --md-sys-color-on-surface: #191c20;
+  --md-sys-color-on-surface-variant: #43474e;
+  --md-sys-color-primary: #2d628c;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #cce5ff;
+  --md-sys-color-on-primary-container: #001d32;
+  --md-sys-color-secondary: #51606f;
+  --md-sys-color-secondary-container: #d5e4f7;
+  --md-sys-color-on-secondary-container: #0e1d2a;
+  --md-sys-color-tertiary: #6a5779;
+  --md-sys-color-tertiary-container: #f2daff;
+  --md-sys-color-on-tertiary-container: #241432;
+  --md-sys-color-outline: #73777f;
+  --md-sys-color-outline-variant: #c3c6cf;
+  --md-sys-color-success: #166534;
+  --md-sys-color-success-container: #dcfce7;
+  --md-sys-color-on-success-container: #052e16;
+  --md-sys-color-warning: #92400e;
+  --md-sys-color-warning-container: #fef3c7;
+  --md-sys-color-on-warning-container: #451a03;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+}
+
+.dark {
+  color-scheme: dark;
+  --md-color-scheme: dark;
+  --md-sys-color-surface: #111318;
+  --md-sys-color-surface-container-low: #191c22;
+  --md-sys-color-surface-container: #1d2026;
+  --md-sys-color-surface-container-high: #282a31;
+  --md-sys-color-surface-container-highest: #33353c;
+  --md-sys-color-on-surface: #e2e2e9;
+  --md-sys-color-on-surface-variant: #c3c6cf;
+  --md-sys-color-primary: #a3c9ff;
+  --md-sys-color-on-primary: #00315d;
+  --md-sys-color-primary-container: #1b4876;
+  --md-sys-color-on-primary-container: #d3e4ff;
+  --md-sys-color-secondary: #b9c8da;
+  --md-sys-color-secondary-container: #394857;
+  --md-sys-color-on-secondary-container: #d5e4f7;
+  --md-sys-color-tertiary: #d6bee5;
+  --md-sys-color-tertiary-container: #523f5f;
+  --md-sys-color-on-tertiary-container: #f2daff;
+  --md-sys-color-outline: #8d9199;
+  --md-sys-color-outline-variant: #43474e;
+  --md-sys-color-success: #86efac;
+  --md-sys-color-success-container: #14532d;
+  --md-sys-color-on-success-container: #dcfce7;
+  --md-sys-color-warning: #fcd34d;
+  --md-sys-color-warning-container: #451a03;
+  --md-sys-color-on-warning-container: #fde68a;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+}
+
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-sans);
+  transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+select.m3-select {
+  color-scheme: var(--md-color-scheme);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schemaVersion": "1.0.0",
+  "stages": {
+    "stage-0-baseline-examination": {
+      "stageId": "stage-0-baseline-examination",
+      "evaluatedAt": "2026-11-14T12:47:24.430Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 1427
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1254
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1985
+        }
+      }
+    },
+    "stage-1a-autotitle-dearrow-hardening": {
+      "stageId": "stage-1a-autotitle-dearrow-hardening",
+      "evaluatedAt": "2026-11-15T08:46:23.864Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 1402
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1069
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1619
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 61589
+        }
+      }
+    },
+    "stage-1b-multi-team-audit-and-roadmap": {
+      "stageId": "stage-1b-multi-team-audit-and-roadmap",
+      "evaluatedAt": "2026-11-16T12:49:57.572Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 0
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 0
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 0
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 1846
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1232
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1681
+        }
+      }
+    },
+    "stage-1-ask-pipeline-resilience": {
+      "stageId": "stage-1-ask-pipeline-resilience",
+      "evaluatedAt": "2026-11-16T13:05:26.588Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 2819
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1395
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1874
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 67450
+        }
+      }
+    },
+    "stage-2-dom-spa-storage-hardening": {
+      "stageId": "stage-2-dom-spa-storage-hardening",
+      "evaluatedAt": "2026-11-16T14:01:08.416Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 1814
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1311
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1840
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 72500
+        }
+      }
+    },
+    "stage-3-accessibility-keyboard-nav": {
+      "stageId": "stage-3-accessibility-keyboard-nav",
+      "evaluatedAt": "2026-11-17T11:48:33.250Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 2265
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1602
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1874
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 79987
+        }
+      }
+    },
+    "stage-4-architecture-and-ux-features": {
+      "stageId": "stage-4-architecture-and-ux-features",
+      "evaluatedAt": "2026-11-17T12:39:47.611Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 1423
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1710
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1644
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 79970
+        }
+      }
+    },
+    "stage-5-offline-export-bundle": {
+      "stageId": "stage-5-offline-export-bundle",
+      "evaluatedAt": "2026-11-18T14:36:10.646Z",
+      "consensusReached": true,
+      "missingRoles": [],
+      "nonApproved": [],
+      "openCriticalFindings": [],
+      "rolesEvaluated": [
+        {
+          "roleId": "security-concurrency-skeptic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        },
+        {
+          "roleId": "reliability-perf-auditor",
+          "verdict": "APPROVE",
+          "findingsCount": 3,
+          "resolvedCount": 3
+        },
+        {
+          "roleId": "ux-spec-critic",
+          "verdict": "APPROVE",
+          "findingsCount": 2,
+          "resolvedCount": 2
+        }
+      ],
+      "automatedChecks": {
+        "unit": {
+          "ok": true,
+          "durationMs": 2347
+        },
+        "lint": {
+          "ok": true,
+          "durationMs": 1538
+        },
+        "build": {
+          "ok": true,
+          "durationMs": 1580
+        },
+        "e2e": {
+          "ok": true,
+          "durationMs": 80626
+        }
+      }
+    }
+  }
+}
